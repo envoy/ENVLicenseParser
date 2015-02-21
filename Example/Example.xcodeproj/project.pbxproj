@@ -16,6 +16,9 @@
 		C2271CA31A9848A600CF2956 /* ENVPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CA21A9848A600CF2956 /* ENVPerson.m */; };
 		C2271CA51A9849D300CF2956 /* ENVPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CA41A9849D300CF2956 /* ENVPersonTests.m */; };
 		C2271CA81A984A6000CF2956 /* ENVTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CA71A984A6000CF2956 /* ENVTestConstants.m */; };
+		C2271CAE1A984EFB00CF2956 /* ENVLicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CAD1A984EFB00CF2956 /* ENVLicenseParser.m */; };
+		C2271CB01A98507400CF2956 /* ENVLicenseParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CAF1A98507400CF2956 /* ENVLicenseParserTests.m */; };
+		C2271CB31A98513C00CF2956 /* NSString+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CB21A98513C00CF2956 /* NSString+ENVAdditions.m */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,11 @@
 		C2271CA41A9849D300CF2956 /* ENVPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVPersonTests.m; sourceTree = "<group>"; };
 		C2271CA61A984A6000CF2956 /* ENVTestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENVTestConstants.h; sourceTree = "<group>"; };
 		C2271CA71A984A6000CF2956 /* ENVTestConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVTestConstants.m; sourceTree = "<group>"; };
+		C2271CAC1A984EFB00CF2956 /* ENVLicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVLicenseParser.h; path = ../../ENVLicenseParser.h; sourceTree = "<group>"; };
+		C2271CAD1A984EFB00CF2956 /* ENVLicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVLicenseParser.m; path = ../../ENVLicenseParser.m; sourceTree = "<group>"; };
+		C2271CAF1A98507400CF2956 /* ENVLicenseParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVLicenseParserTests.m; sourceTree = "<group>"; };
+		C2271CB11A98513C00CF2956 /* NSString+ENVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ENVAdditions.h"; sourceTree = "<group>"; };
+		C2271CB21A98513C00CF2956 /* NSString+ENVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ENVAdditions.m"; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +123,7 @@
 		42C5AB378FD55C25435B670A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				C2271CAF1A98507400CF2956 /* ENVLicenseParserTests.m */,
 				C2271CA41A9849D300CF2956 /* ENVPersonTests.m */,
 			);
 			path = Tests;
@@ -134,6 +143,8 @@
 			children = (
 				C2271CA61A984A6000CF2956 /* ENVTestConstants.h */,
 				C2271CA71A984A6000CF2956 /* ENVTestConstants.m */,
+				C2271CB11A98513C00CF2956 /* NSString+ENVAdditions.h */,
+				C2271CB21A98513C00CF2956 /* NSString+ENVAdditions.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -169,6 +180,8 @@
 		C2271CA01A98489100CF2956 /* ENVLicenseParser */ = {
 			isa = PBXGroup;
 			children = (
+				C2271CAC1A984EFB00CF2956 /* ENVLicenseParser.h */,
+				C2271CAD1A984EFB00CF2956 /* ENVLicenseParser.m */,
 				C2271CA11A9848A600CF2956 /* ENVPerson.h */,
 				C2271CA21A9848A600CF2956 /* ENVPerson.m */,
 			);
@@ -311,6 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2271CB01A98507400CF2956 /* ENVLicenseParserTests.m in Sources */,
+				C2271CB31A98513C00CF2956 /* NSString+ENVAdditions.m in Sources */,
 				C2271CA51A9849D300CF2956 /* ENVPersonTests.m in Sources */,
 				C2271CA81A984A6000CF2956 /* ENVTestConstants.m in Sources */,
 			);
@@ -322,6 +337,7 @@
 			files = (
 				C2271C9E1A98449C00CF2956 /* ENVAppDelegate.m in Sources */,
 				494283D0D8F3D419F2C4B48F /* Main.storyboard in Sources */,
+				C2271CAE1A984EFB00CF2956 /* ENVLicenseParser.m in Sources */,
 				BD8A79DD5F3EF4D212A923D2 /* LaunchScreen.xib in Sources */,
 				CADCF3D645591696244F8476 /* main.m in Sources */,
 				C2271CA31A9848A600CF2956 /* ENVPerson.m in Sources */,
