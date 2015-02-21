@@ -1,3 +1,4 @@
+#import "ENVFixtureLoader.h"
 #import "ENVLicenseParser.h"
 #import "NSString+ENVAdditions.h"
 
@@ -17,6 +18,12 @@
 {
   NSString *dummyString = [NSString stringWithCharacter:'a' count:20];
   XCTAssertNil([ENVLicenseParser personFromString:dummyString]);
+}
+
+- (void)testSupportedStates
+{
+  NSString *string = [ENVFixtureLoader stringFromState:@"SC"];
+  XCTAssertNotNil([ENVLicenseParser personFromString:string]);
 }
 
 @end

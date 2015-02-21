@@ -19,6 +19,8 @@
 		C2271CAE1A984EFB00CF2956 /* ENVLicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CAD1A984EFB00CF2956 /* ENVLicenseParser.m */; };
 		C2271CB01A98507400CF2956 /* ENVLicenseParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CAF1A98507400CF2956 /* ENVLicenseParserTests.m */; };
 		C2271CB31A98513C00CF2956 /* NSString+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CB21A98513C00CF2956 /* NSString+ENVAdditions.m */; };
+		C2271CBD1A98572000CF2956 /* SC.txt in Resources */ = {isa = PBXBuildFile; fileRef = C2271CBC1A98572000CF2956 /* SC.txt */; };
+		C2271CC01A98576C00CF2956 /* ENVFixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CBF1A98576C00CF2956 /* ENVFixtureLoader.m */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,9 @@
 		C2271CAF1A98507400CF2956 /* ENVLicenseParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVLicenseParserTests.m; sourceTree = "<group>"; };
 		C2271CB11A98513C00CF2956 /* NSString+ENVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ENVAdditions.h"; sourceTree = "<group>"; };
 		C2271CB21A98513C00CF2956 /* NSString+ENVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ENVAdditions.m"; sourceTree = "<group>"; };
+		C2271CBC1A98572000CF2956 /* SC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SC.txt; path = ../../data/SC.txt; sourceTree = "<group>"; };
+		C2271CBE1A98576C00CF2956 /* ENVFixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENVFixtureLoader.h; sourceTree = "<group>"; };
+		C2271CBF1A98576C00CF2956 /* ENVFixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVFixtureLoader.m; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +146,8 @@
 		77D91B17B9E243D8BAA3883C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C2271CBE1A98576C00CF2956 /* ENVFixtureLoader.h */,
+				C2271CBF1A98576C00CF2956 /* ENVFixtureLoader.m */,
 				C2271CA61A984A6000CF2956 /* ENVTestConstants.h */,
 				C2271CA71A984A6000CF2956 /* ENVTestConstants.m */,
 				C2271CB11A98513C00CF2956 /* NSString+ENVAdditions.h */,
@@ -152,8 +159,9 @@
 		9E70A2F0F5B8F7BA7B54729F /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				69549A429DFC0E5A1D5FA290 /* Resources */,
+				C2271CBB1A98571000CF2956 /* Fixtures */,
 				77D91B17B9E243D8BAA3883C /* Helpers */,
+				69549A429DFC0E5A1D5FA290 /* Resources */,
 				42C5AB378FD55C25435B670A /* Tests */,
 			);
 			path = UnitTests;
@@ -186,6 +194,14 @@
 				C2271CA21A9848A600CF2956 /* ENVPerson.m */,
 			);
 			name = ENVLicenseParser;
+			sourceTree = "<group>";
+		};
+		C2271CBB1A98571000CF2956 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				C2271CBC1A98572000CF2956 /* SC.txt */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 		C7A5C563EA1A51C72EDC71ED /* Example */ = {
@@ -297,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2271CBD1A98572000CF2956 /* SC.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2271CC01A98576C00CF2956 /* ENVFixtureLoader.m in Sources */,
 				C2271CB01A98507400CF2956 /* ENVLicenseParserTests.m in Sources */,
 				C2271CB31A98513C00CF2956 /* NSString+ENVAdditions.m in Sources */,
 				C2271CA51A9849D300CF2956 /* ENVPersonTests.m in Sources */,

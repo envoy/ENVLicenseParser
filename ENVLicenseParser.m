@@ -1,6 +1,5 @@
 #import "ENVLicenseParser.h"
 
-static NSString *const ComplianceString = @"@\x0A0x1E0x0DANSI ";
 NSString *const ENVLicenseParserDebug = @"ENV_LICENSE_PARSER_DEBUG";
 
 #define ENVLog(x) if (getenv(ENVLicenseParserDebug.UTF8String)) { NSLog(@"%s %@", __PRETTY_FUNCTION__, x); }
@@ -14,9 +13,8 @@ NSString *const ENVLicenseParserDebug = @"ENV_LICENSE_PARSER_DEBUG";
     return nil;
   }
 
-  NSLog(@"aaa %@", ComplianceString);
-
-  if (![string hasPrefix:ComplianceString]) {
+  unichar character = [string characterAtIndex:0];
+  if (character != '@') {
     ENVLog(@"Invalid compliance string");
     return nil;
   }
