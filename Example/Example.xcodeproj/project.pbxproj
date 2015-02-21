@@ -21,6 +21,7 @@
 		C2271CB31A98513C00CF2956 /* NSString+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CB21A98513C00CF2956 /* NSString+ENVAdditions.m */; };
 		C2271CBD1A98572000CF2956 /* SC.txt in Resources */ = {isa = PBXBuildFile; fileRef = C2271CBC1A98572000CF2956 /* SC.txt */; };
 		C2271CC01A98576C00CF2956 /* ENVFixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CBF1A98576C00CF2956 /* ENVFixtureLoader.m */; };
+		C2271CC31A98602C00CF2956 /* ENVVersion01LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CC21A98602C00CF2956 /* ENVVersion01LicenseParser.m */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,9 @@
 		C2271CBC1A98572000CF2956 /* SC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SC.txt; path = ../../data/SC.txt; sourceTree = "<group>"; };
 		C2271CBE1A98576C00CF2956 /* ENVFixtureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENVFixtureLoader.h; sourceTree = "<group>"; };
 		C2271CBF1A98576C00CF2956 /* ENVFixtureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVFixtureLoader.m; sourceTree = "<group>"; };
+		C2271CC11A98602C00CF2956 /* ENVVersion01LicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVVersion01LicenseParser.h; path = ../../ENVVersion01LicenseParser.h; sourceTree = "<group>"; };
+		C2271CC21A98602C00CF2956 /* ENVVersion01LicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVVersion01LicenseParser.m; path = ../../ENVVersion01LicenseParser.m; sourceTree = "<group>"; };
+		C2271CC41A98604D00CF2956 /* ENVLicenseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ENVLicenseParser.h; path = ../../ENVLicenseParser.h; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,8 +194,11 @@
 			children = (
 				C2271CAC1A984EFB00CF2956 /* ENVBaseLicenseParser.h */,
 				C2271CAD1A984EFB00CF2956 /* ENVBaseLicenseParser.m */,
+				C2271CC41A98604D00CF2956 /* ENVLicenseParser.h */,
 				C2271CA11A9848A600CF2956 /* ENVPerson.h */,
 				C2271CA21A9848A600CF2956 /* ENVPerson.m */,
+				C2271CC11A98602C00CF2956 /* ENVVersion01LicenseParser.h */,
+				C2271CC21A98602C00CF2956 /* ENVVersion01LicenseParser.m */,
 			);
 			name = ENVLicenseParser;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 				BD8A79DD5F3EF4D212A923D2 /* LaunchScreen.xib in Sources */,
 				CADCF3D645591696244F8476 /* main.m in Sources */,
 				C2271CA31A9848A600CF2956 /* ENVPerson.m in Sources */,
+				C2271CC31A98602C00CF2956 /* ENVVersion01LicenseParser.m in Sources */,
 				C2271C9F1A98449C00CF2956 /* ENVViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

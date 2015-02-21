@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "ENVLicenseParser.h"
 
-@interface ENVBaseLicenseParser : NSObject <ENVLicenseParser>
+@interface ENVVersion01LicenseParser : NSObject <ENVLicenseParser>
 
 @end

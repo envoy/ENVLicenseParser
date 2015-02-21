@@ -1,12 +1,13 @@
-#import "ENVFixtureLoader.h"
 #import "ENVBaseLicenseParser.h"
+#import "ENVFixtureLoader.h"
+#import "ENVPerson.h"
 #import "NSString+ENVAdditions.h"
 
 @interface ENVBaseLicenseParserTests : XCTestCase
 
 @end
 
-@implementation ENVLicenseParserTests
+@implementation ENVBaseLicenseParserTests
 
 - (void)testEmptyString
 {
@@ -23,7 +24,8 @@
 - (void)testSupportedStates
 {
   NSString *string = [ENVFixtureLoader stringFromState:@"SC"];
-  XCTAssertNotNil([ENVBaseLicenseParser personFromString:string]);
+  ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
+  XCTAssertEqualObjects(person.name, Name);
 }
 
 @end

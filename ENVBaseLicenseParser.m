@@ -14,11 +14,14 @@
   }
 
   NSString *version = [string substringWithRange:NSMakeRange(15, 2)];
+  NSString *className = [NSString stringWithFormat:@"ENVVersion%@LicenseParser", version];
+  Class class = NSClassFromString(className);
+  if (!class) {
+    NSLog(@"ENVLicenseParser unimplemented version '%@'", version);
+    return nil;
+  }
 
-  // check first stuff
-  // check version
-  // class cluster parse version
-  return @"";
+  return [class personFromString:string];
 }
 
 @end
