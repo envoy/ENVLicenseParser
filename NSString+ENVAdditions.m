@@ -10,7 +10,7 @@
 
 - (NSString *)env_stringByJoiningString:(NSString *)string
 {
-  if (!string) {
+  if (string.length == 0) {
     return self;
   }
 

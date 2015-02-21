@@ -34,6 +34,13 @@
   XCTAssertEqualObjects(joinedString, @"First");
 }
 
+- (void)testJoiningWhitespaceString
+{
+  NSString *string = @"First";
+  NSString *joinedString = [string env_stringByJoiningString:@" "];
+  XCTAssertEqualObjects(joinedString, @"First");
+}
+
 - (void)testJoiningNilString
 {
   NSString *string = @"First";
