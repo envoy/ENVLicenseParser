@@ -1,5 +1,7 @@
 #import "Example-Prefix.pch"
 
 #ifdef __OBJC__
-    @import XCTest;
+  @import XCTest;
+
+  #import "ENVTestConstants.h"
 #endif

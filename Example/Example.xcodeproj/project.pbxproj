@@ -13,6 +13,9 @@
 		BD8A79DD5F3EF4D212A923D2 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5D67EC3358554A7406F2A04E /* LaunchScreen.xib */; };
 		C2271C9E1A98449C00CF2956 /* ENVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271C9B1A98449C00CF2956 /* ENVAppDelegate.m */; };
 		C2271C9F1A98449C00CF2956 /* ENVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271C9D1A98449C00CF2956 /* ENVViewController.m */; };
+		C2271CA31A9848A600CF2956 /* ENVPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CA21A9848A600CF2956 /* ENVPerson.m */; };
+		C2271CA51A9849D300CF2956 /* ENVPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CA41A9849D300CF2956 /* ENVPersonTests.m */; };
+		C2271CA81A984A6000CF2956 /* ENVTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CA71A984A6000CF2956 /* ENVTestConstants.m */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,11 @@
 		C2271C9B1A98449C00CF2956 /* ENVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVAppDelegate.m; sourceTree = "<group>"; };
 		C2271C9C1A98449C00CF2956 /* ENVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENVViewController.h; sourceTree = "<group>"; };
 		C2271C9D1A98449C00CF2956 /* ENVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVViewController.m; sourceTree = "<group>"; };
+		C2271CA11A9848A600CF2956 /* ENVPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVPerson.h; path = ../../ENVPerson.h; sourceTree = "<group>"; };
+		C2271CA21A9848A600CF2956 /* ENVPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVPerson.m; path = ../../ENVPerson.m; sourceTree = "<group>"; };
+		C2271CA41A9849D300CF2956 /* ENVPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVPersonTests.m; sourceTree = "<group>"; };
+		C2271CA61A984A6000CF2956 /* ENVTestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENVTestConstants.h; sourceTree = "<group>"; };
+		C2271CA71A984A6000CF2956 /* ENVTestConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVTestConstants.m; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,9 +88,9 @@
 				0B5250056C1AC9DBDB23165A /* Frameworks */,
 				D6E71AAEE58A5EFA1035147C /* Products */,
 			);
-			indentWidth = 4;
+			indentWidth = 2;
 			sourceTree = "<group>";
-			tabWidth = 4;
+			tabWidth = 2;
 			usesTabs = 0;
 		};
 		0EE6A689E913A94546421C69 /* Nibs */ = {
@@ -107,6 +115,7 @@
 		42C5AB378FD55C25435B670A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				C2271CA41A9849D300CF2956 /* ENVPersonTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -123,6 +132,8 @@
 		77D91B17B9E243D8BAA3883C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C2271CA61A984A6000CF2956 /* ENVTestConstants.h */,
+				C2271CA71A984A6000CF2956 /* ENVTestConstants.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -155,9 +166,19 @@
 			path = "Other-Sources";
 			sourceTree = "<group>";
 		};
+		C2271CA01A98489100CF2956 /* ENVLicenseParser */ = {
+			isa = PBXGroup;
+			children = (
+				C2271CA11A9848A600CF2956 /* ENVPerson.h */,
+				C2271CA21A9848A600CF2956 /* ENVPerson.m */,
+			);
+			name = ENVLicenseParser;
+			sourceTree = "<group>";
+		};
 		C7A5C563EA1A51C72EDC71ED /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				C2271CA01A98489100CF2956 /* ENVLicenseParser */,
 				C2271C9A1A98449C00CF2956 /* ENVAppDelegate.h */,
 				C2271C9B1A98449C00CF2956 /* ENVAppDelegate.m */,
 				C2271C9C1A98449C00CF2956 /* ENVViewController.h */,
@@ -290,6 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2271CA51A9849D300CF2956 /* ENVPersonTests.m in Sources */,
+				C2271CA81A984A6000CF2956 /* ENVTestConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +324,7 @@
 				494283D0D8F3D419F2C4B48F /* Main.storyboard in Sources */,
 				BD8A79DD5F3EF4D212A923D2 /* LaunchScreen.xib in Sources */,
 				CADCF3D645591696244F8476 /* main.m in Sources */,
+				C2271CA31A9848A600CF2956 /* ENVPerson.m in Sources */,
 				C2271C9F1A98449C00CF2956 /* ENVViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +522,10 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"TESTING=1",
+				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
