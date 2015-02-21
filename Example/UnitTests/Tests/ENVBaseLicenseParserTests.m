@@ -25,7 +25,11 @@
 {
   NSString *string = [ENVFixtureLoader stringFromState:@"SC"];
   ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
-  XCTAssertEqualObjects(person.name, Name);
+  ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
+                                                 licenseID:LicenseNumber
+                                                   address:[NSString stringWithFormat:AddressFormat, @"SC"]
+                                                   expired:NO];
+  XCTAssertEqualObjects(person, vaildPerson);
 }
 
 @end

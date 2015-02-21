@@ -43,4 +43,11 @@
   return YES;
 }
 
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"<%@: %p - %@ %@ %@ Expired? %@>",
+          NSStringFromClass([self class]), self, self.licenseID, self.name,
+          self.address, self.expired ? @"Yes" : @"No"];
+}
+
 @end

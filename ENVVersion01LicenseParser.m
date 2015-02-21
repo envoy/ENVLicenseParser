@@ -36,7 +36,7 @@
 
 + (NSString *)formatNameFromString:(NSString *)string
 {
-  NSArray *components = [[string lowercaseString] componentsSeparatedByString:@","];
+  NSArray *components = [string componentsSeparatedByString:@","];
   if (components.count < 1) {
     return nil;
   }
@@ -46,8 +46,9 @@
   NSString *givenName = [[components subarrayWithRange:range]
                          componentsJoinedByString:@" "];
 
-  return [[givenName stringByAppendingString:lastName]
-          stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+  return [[[givenName stringByAppendingString:lastName]
+           stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
+          capitalizedString];
 }
 
 + (NSString *)formatAddressFromStreet:(NSString *)street
