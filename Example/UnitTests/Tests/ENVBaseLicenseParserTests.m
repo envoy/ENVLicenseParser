@@ -1,8 +1,8 @@
 #import "ENVFixtureLoader.h"
-#import "ENVLicenseParser.h"
+#import "ENVBaseLicenseParser.h"
 #import "NSString+ENVAdditions.h"
 
-@interface ENVLicenseParserTests : XCTestCase
+@interface ENVBaseLicenseParserTests : XCTestCase
 
 @end
 
@@ -10,20 +10,20 @@
 
 - (void)testEmptyString
 {
-  XCTAssertNil([ENVLicenseParser personFromString:@""]);
-  XCTAssertNil([ENVLicenseParser personFromString:nil]);
+  XCTAssertNil([ENVBaseLicenseParser personFromString:@""]);
+  XCTAssertNil([ENVBaseLicenseParser personFromString:nil]);
 }
 
 - (void)testMissingCompliance
 {
   NSString *dummyString = [NSString stringWithCharacter:'a' count:20];
-  XCTAssertNil([ENVLicenseParser personFromString:dummyString]);
+  XCTAssertNil([ENVBaseLicenseParser personFromString:dummyString]);
 }
 
 - (void)testSupportedStates
 {
   NSString *string = [ENVFixtureLoader stringFromState:@"SC"];
-  XCTAssertNotNil([ENVLicenseParser personFromString:string]);
+  XCTAssertNotNil([ENVBaseLicenseParser personFromString:string]);
 }
 
 @end
