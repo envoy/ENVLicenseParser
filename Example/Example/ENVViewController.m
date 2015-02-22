@@ -9,35 +9,37 @@
 
 @implementation ENVViewController
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-  [super viewDidAppear:animated];
+  [super viewWillAppear:animated];
 
-  AVCaptureSession *session = [[AVCaptureSession alloc] init];
   AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
   if (!device) {
     return;
   }
 
-  NSError *error = nil;
-
+  self.session = [[AVCaptureSession alloc] init];
   AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device
-                                                                      error:&error];
-  if (input) {
-    [session addInput:input];
-  } else {
-    NSLog(@"Error: %@", error);
+                                                                      error:nil];
+  AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
+  if (![self.session canAddInput:input]) {
+    return;
   }
 
-  AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
-  [session addOutput:output];
+  if (![self.session canAddOutput:output]) {
+    return;
+  }
+
+  [self.session addInput:input];
+  [self.session addOutput:output];
+
   [output setMetadataObjectTypes:@[AVMetadataObjectTypePDF417Code]];
   [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
 
-  [session startRunning];
-  self.session = session;
+  [self.session startRunning];
 
-  AVCaptureVideoPreviewLayer *layer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+  AVCaptureVideoPreviewLayer *layer = [[AVCaptureVideoPreviewLayer alloc]
+                                       initWithSession:self.session];
   layer.frame = self.view.frame;
   [self.view.layer addSublayer:layer];
 }
@@ -46,36 +48,34 @@
 didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection *)connection
 {
-  NSString *QRCode = nil;
-  for (AVMetadataObject *metadata in metadataObjects) {
-    if ([metadata.type isEqualToString:AVMetadataObjectTypePDF417Code]) {
-      // This will never happen; nobody has ever scanned a QR code... ever
-      QRCode = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
-      break;
-    }
-  }
-
-  NSArray *compoments = [QRCode componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-  NSString *filename = @"Unknown";
-  for (NSString *component in compoments) {
-    if (component.length != 5) {
+  NSString *string;
+  for (AVMetadataMachineReadableCodeObject *metadata in metadataObjects) {
+    if (![metadata.type isEqualToString:AVMetadataObjectTypePDF417Code]) {
       continue;
     }
 
-    if (![[component uppercaseString] hasPrefix:@"DAJ"]) {
-      continue;
-    }
-
-    NSString *state = [component substringFromIndex:3];
-    filename = state;
+    string = [metadata stringValue];
+    break;
   }
 
-  NSURL *documentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+  if (string.length == 0) {
+    NSLog(@"Failed to scan");
+    return;
+  }
+
+  NSString *filename = @"newscan.txt";
+  NSURL *documentsDirectory = [[[NSFileManager defaultManager]
+                                URLsForDirectory:NSDocumentDirectory
+                                inDomains:NSUserDomainMask] firstObject];
   NSURL *fileURL = [documentsDirectory URLByAppendingPathComponent:filename];
-  NSLog(@"QR Code: %@", QRCode);
-  NSError *error = nil;
-  [QRCode writeToURL:fileURL atomically:YES encoding:NSUTF8StringEncoding error:&error];
-  NSLog(@"Write error: %@", error);
+  NSLog(@"Scanned: %@", string);
+  BOOL written = [string writeToURL:fileURL
+                         atomically:YES
+                           encoding:NSUTF8StringEncoding
+                              error:nil];
+  if (!written) {
+    NSLog(@"Failed to save scan");
+  }
 }
 
 
