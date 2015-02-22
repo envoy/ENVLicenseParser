@@ -1,15 +1,17 @@
 #import "ENVPerson.h"
 #import "ENVVersion01LicenseParser.h"
 #import "NSArray+ENVAdditions.h"
+#import "NSString+ENVAdditions.h"
 
 @implementation ENVVersion01LicenseParser
 
 + (ENVPerson *)personFromString:(NSString *)string
 {
-  NSArray *components = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-
+  NSArray *components = [string componentsSeparatedByCharactersInSet:
+                         [NSCharacterSet newlineCharacterSet]];
   NSDictionary *dictionary = [components env_licenseDictionary];
 
+  NSString *licenseID = [self formatLicenseIDFromString:dictionary[@"ANS"]];
   NSString *name = [self formatNameFromString:dictionary[@"DAA"]];
   NSString *street = dictionary[@"DAG"];
   NSString *city = dictionary[@"DAI"];
@@ -21,7 +23,7 @@
                                                 zip:zip];
 
   return [[ENVPerson alloc] initWithName:name
-                               licenseID:nil
+                               licenseID:licenseID
                                  address:address
                                  expired:NO];
 }
@@ -39,8 +41,17 @@
                          componentsJoinedByString:@" "];
 
   return [[[givenName stringByAppendingString:lastName]
-           stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
-          capitalizedString];
+           env_stringByTrimmingSpaces] capitalizedString];
+}
+
++ (NSString *)formatLicenseIDFromString:(NSString *)string
+{
+  NSArray *components = [string componentsSeparatedByString:@"DAQ"];
+  if (components.count < 2) {
+    return nil;
+  }
+
+  return [components.lastObject env_stringByTrimmingSpaces];
 }
 
 + (NSString *)formatAddressFromStreet:(NSString *)street
@@ -48,7 +59,13 @@
                                 state:(NSString *)state
                                   zip:(NSString *)zip
 {
-  return nil;
+  NSString *address = [[[[street env_stringByJoiningString:city]
+                         env_stringByJoiningString:state]
+                        env_stringByJoiningString:zip] capitalizedString];
+  NSRange range = [address rangeOfString:[state capitalizedString]
+                                 options:NSBackwardsSearch];
+  return [address stringByReplacingCharactersInRange:range
+                                          withString:[state uppercaseString]];
 }
 
 @end
