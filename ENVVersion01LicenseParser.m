@@ -1,6 +1,7 @@
 #import "ENVPerson.h"
 #import "ENVVersion01LicenseParser.h"
 #import "NSArray+ENVAdditions.h"
+#import "NSDate+ENVAdditions.h"
 #import "NSString+ENVAdditions.h"
 
 @implementation ENVVersion01LicenseParser
@@ -17,6 +18,9 @@
   NSString *city = dictionary[@"DAI"];
   NSString *state = dictionary[@"DAJ"];
   NSString *zip = dictionary[@"DAK"];
+  NSString *dateString = dictionary[@"DBA"];
+  NSDate *date = [self dateFromString:dateString];
+  BOOL expired = [date env_isInPast];
   NSString *address = [self formatAddressFromStreet:street
                                                city:city
                                               state:state
@@ -25,7 +29,7 @@
   return [[ENVPerson alloc] initWithName:name
                                licenseID:licenseID
                                  address:address
-                                 expired:NO];
+                                 expired:expired];
 }
 
 + (NSString *)formatNameFromString:(NSString *)string
@@ -66,6 +70,17 @@
                                  options:NSBackwardsSearch];
   return [address stringByReplacingCharactersInRange:range
                                           withString:[state uppercaseString]];
+}
+
++ (NSDate *)dateFromString:(NSString *)string
+{
+  if (!string) {
+    return nil;
+  }
+
+  NSDateFormatter *dateFormatter = [NSDateFormatter new];
+  dateFormatter.dateFormat = @"yyyyMMdd";
+  return [dateFormatter dateFromString:string];
 }
 
 @end

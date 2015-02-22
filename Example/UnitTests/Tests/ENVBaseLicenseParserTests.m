@@ -23,13 +23,20 @@
 
 - (void)testSupportedStates
 {
-  NSString *string = [ENVFixtureLoader stringFromState:@"SC"];
-  ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
-  ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
-                                                 licenseID:LicenseNumber
-                                                   address:[NSString stringWithFormat:AddressFormat, @"SC"]
-                                                   expired:NO];
-  XCTAssertEqualObjects(person, vaildPerson);
+//  NSArray *fileURLs = [ENVFixtureLoader fixureURLs];
+//  for (NSURL *fileURL in fileURLs) {
+//    NSString *filename = [[fileURL.lastPathComponent componentsSeparatedByString:@"."] firstObject];
+//    NSString *state = [filename substringToIndex:2];
+
+//    BOOL expired = filename.length > 2;
+  NSString *string = [ENVFixtureLoader stringFromState:@"SCExpired"];
+    ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
+    ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
+                                                   licenseID:LicenseNumber
+                                                     address:[NSString stringWithFormat:AddressFormat, @"SC"]
+                                                     expired:YES];
+    XCTAssertEqualObjects(person, vaildPerson);
+//  }
 }
 
 @end
