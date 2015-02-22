@@ -55,4 +55,10 @@
   XCTAssertEqualObjects(joinedString, @"First Middle Last");
 }
 
+- (void)testJoiningIntoEmptyString
+{
+  NSString *joinedString = [@"" env_stringByJoiningString:@"Last"];
+  XCTAssertEqualObjects(joinedString, @"Last");
+}
+
 @end
