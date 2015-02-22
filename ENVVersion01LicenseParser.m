@@ -1,5 +1,6 @@
 #import "ENVPerson.h"
 #import "ENVVersion01LicenseParser.h"
+#import "NSArray+ENVAdditions.h"
 
 @implementation ENVVersion01LicenseParser
 
@@ -7,16 +8,7 @@
 {
   NSArray *components = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
-  NSMutableDictionary *dictionary = [NSMutableDictionary new];
-  for (NSString *component in components) {
-    if (component.length < 4) {
-      continue;
-    }
-
-    NSString *key = [component substringToIndex:3];
-    NSString *value = [component substringFromIndex:3];
-    dictionary[key] = value;
-  }
+  NSDictionary *dictionary = [components env_licenseDictionary];
 
   NSString *name = [self formatNameFromString:dictionary[@"DAA"]];
   NSString *street = dictionary[@"DAG"];
