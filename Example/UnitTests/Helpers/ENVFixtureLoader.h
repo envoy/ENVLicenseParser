@@ -1,7 +1,8 @@
 @interface ENVFixtureLoader : NSObject
 
-
-+ (NSArray *)fixureURLs;
++ (NSArray *)statesURLs;
++ (NSArray *)expiredStatesURLs;
++ (NSArray *)sampleURLs;
 + (NSString *)stringFromURL:(NSURL *)URL;
 + (NSString *)stringFromState:(NSString *)state;
 

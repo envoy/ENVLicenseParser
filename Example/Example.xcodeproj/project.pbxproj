@@ -19,7 +19,6 @@
 		C2271CAE1A984EFB00CF2956 /* ENVBaseLicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CAD1A984EFB00CF2956 /* ENVBaseLicenseParser.m */; };
 		C2271CB01A98507400CF2956 /* ENVBaseLicenseParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CAF1A98507400CF2956 /* ENVBaseLicenseParserTests.m */; };
 		C2271CB31A98513C00CF2956 /* NSString+ENVTestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CB21A98513C00CF2956 /* NSString+ENVTestAdditions.m */; };
-		C2271CBD1A98572000CF2956 /* SC.txt in Resources */ = {isa = PBXBuildFile; fileRef = C2271CBC1A98572000CF2956 /* SC.txt */; };
 		C2271CC01A98576C00CF2956 /* ENVFixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CBF1A98576C00CF2956 /* ENVFixtureLoader.m */; };
 		C2271CC31A98602C00CF2956 /* ENVVersion01LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CC21A98602C00CF2956 /* ENVVersion01LicenseParser.m */; };
 		C2271CC71A99256400CF2956 /* NSString+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CC61A99256400CF2956 /* NSString+ENVAdditions.m */; };
@@ -28,7 +27,9 @@
 		C2271CD11A997D7D00CF2956 /* ENVNSArrayAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CD01A997D7D00CF2956 /* ENVNSArrayAdditionsTests.m */; };
 		C2271CD41A9981CB00CF2956 /* NSDate+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CD31A9981CB00CF2956 /* NSDate+ENVAdditions.m */; };
 		C2271CD61A99822500CF2956 /* ENVNSDateAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2271CD51A99822500CF2956 /* ENVNSDateAdditionsTests.m */; };
-		C2271CD81A9982E700CF2956 /* SCExpired.txt in Resources */ = {isa = PBXBuildFile; fileRef = C2271CD71A9982E700CF2956 /* SCExpired.txt */; };
+		C2271CDC1A9995D000CF2956 /* SCExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2271CD71A9982E700CF2956 /* SCExpired.txt */; };
+		C2271CDD1A9995D400CF2956 /* SC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2271CBC1A98572000CF2956 /* SC.txt */; };
+		C2271CE01A99971E00CF2956 /* SCSample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2271CDE1A99971500CF2956 /* SCSample.txt */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,39 @@
 			remoteInfo = Example;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2271CD91A9995B300CF2956 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = states;
+			dstSubfolderSpec = 7;
+			files = (
+				C2271CDD1A9995D400CF2956 /* SC.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2271CDA1A9995BF00CF2956 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = expired;
+			dstSubfolderSpec = 7;
+			files = (
+				C2271CDC1A9995D000CF2956 /* SCExpired.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2271CDB1A9995C600CF2956 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = samples;
+			dstSubfolderSpec = 7;
+			files = (
+				C2271CE01A99971E00CF2956 /* SCSample.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C65D45CE36332AF645212BD /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +116,7 @@
 		C2271CD31A9981CB00CF2956 /* NSDate+ENVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+ENVAdditions.m"; path = "../../NSDate+ENVAdditions.m"; sourceTree = "<group>"; };
 		C2271CD51A99822500CF2956 /* ENVNSDateAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENVNSDateAdditionsTests.m; sourceTree = "<group>"; };
 		C2271CD71A9982E700CF2956 /* SCExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SCExpired.txt; path = ../../data/SCExpired.txt; sourceTree = "<group>"; };
+		C2271CDE1A99971500CF2956 /* SCSample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SCSample.txt; path = ../../data/SCSample.txt; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +269,7 @@
 			children = (
 				C2271CBC1A98572000CF2956 /* SC.txt */,
 				C2271CD71A9982E700CF2956 /* SCExpired.txt */,
+				C2271CDE1A99971500CF2956 /* SCSample.txt */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -277,6 +313,9 @@
 				C797D0CCEC96E61CDF70F100 /* Sources */,
 				A368BAFF8CD90B5D72B18A7C /* Frameworks */,
 				D8AB1BFA3C000B5F11A77974 /* Resources */,
+				C2271CD91A9995B300CF2956 /* CopyFiles */,
+				C2271CDA1A9995BF00CF2956 /* CopyFiles */,
+				C2271CDB1A9995C600CF2956 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -347,8 +386,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2271CD81A9982E700CF2956 /* SCExpired.txt in Resources */,
-				C2271CBD1A98572000CF2956 /* SC.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

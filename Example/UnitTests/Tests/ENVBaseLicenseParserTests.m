@@ -23,18 +23,46 @@
 
 - (void)testSupportedStates
 {
-  NSArray *fileURLs = [ENVFixtureLoader fixureURLs];
+  NSArray *fileURLs = [ENVFixtureLoader statesURLs];
+  XCTAssertTrue(fileURLs.count > 0);
   for (NSURL *fileURL in fileURLs) {
-    NSString *filename = [[fileURL.lastPathComponent componentsSeparatedByString:@"."] firstObject];
-    NSString *state = [filename substringToIndex:2];
-    BOOL expired = filename.length > 2;
+    NSString *state = [fileURL.lastPathComponent substringToIndex:2];
     NSString *string = [ENVFixtureLoader stringFromURL:fileURL];
     ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
     ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
                                                    licenseID:LicenseNumber
                                                      address:[NSString stringWithFormat:AddressFormat, state]
-                                                     expired:expired];
+                                                     expired:NO];
     XCTAssertEqualObjects(person, vaildPerson);
+  }
+}
+
+- (void)testExpiredStates
+{
+  NSArray *fileURLs = [ENVFixtureLoader expiredStatesURLs];
+  XCTAssertTrue(fileURLs.count > 0);
+  for (NSURL *fileURL in fileURLs) {
+    NSString *state = [fileURL.lastPathComponent substringToIndex:2];
+    NSString *string = [ENVFixtureLoader stringFromURL:fileURL];
+    ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
+    ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
+                                                   licenseID:LicenseNumber
+                                                     address:[NSString stringWithFormat:AddressFormat, state]
+                                                     expired:YES];
+    XCTAssertEqualObjects(person, vaildPerson);
+  }
+}
+
+- (void)testSamples
+{
+  NSArray *fileURLs = [ENVFixtureLoader sampleURLs];
+  XCTAssertTrue(fileURLs.count > 0);
+  for (NSURL *fileURL in fileURLs) {
+    NSString *string = [ENVFixtureLoader stringFromURL:fileURL];
+    ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
+    XCTAssertNotNil(person.name);
+    XCTAssertNotNil(person.address);
+    XCTAssertNotNil(person.licenseID);
   }
 }
 
