@@ -1,7 +1,7 @@
 #import "ENVBaseLicenseParser.h"
 #import "ENVFixtureLoader.h"
 #import "ENVPerson.h"
-#import "NSString+ENVAdditions.h"
+#import "NSString+ENVTestAdditions.h"
 
 @interface ENVBaseLicenseParserTests : XCTestCase
 

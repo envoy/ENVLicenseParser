@@ -1,6 +1,6 @@
 #import "NSString+ENVAdditions.h"
 
-@implementation NSString (ENVAdditions)
+@implementation NSString (ENVTestAdditions)
 
 + (NSString *)stringWithCharacter:(unichar)character
                             count:(NSUInteger)count

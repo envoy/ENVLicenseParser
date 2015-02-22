@@ -1,4 +1,4 @@
-@interface NSString (ENVAdditions)
+@interface NSString (ENVTestAdditions)
 
 + (NSString *)stringWithCharacter:(unichar)character
                             count:(NSUInteger)count;
