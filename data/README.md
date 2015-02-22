@@ -18,7 +18,8 @@ Organ donor: Yes
 
 # Notes
 
-- Dates (in this file) are in the format month-day-year
+- Dates (in this file) are in the format month-day-year (this may be
+  different depending on the version of the format)
 - Most of this information will be unused, but entering correctly now ensures
   future feature additions will pass tests
 - These numbers were picked using a random number generator, any resemblance
