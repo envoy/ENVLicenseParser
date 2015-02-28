@@ -14,7 +14,6 @@ Expiration:  10-21-2025
 DOB:         10-21-1950
 Issue date:  09-25-1960
 Gender:      Male
-Organ donor: Yes
 
 # Notes
 

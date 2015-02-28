@@ -30,6 +30,10 @@
 		C2A3556F1AA250F4009796A8 /* NSArray+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A355671AA250F4009796A8 /* NSArray+ENVAdditions.m */; };
 		C2A355701AA250F4009796A8 /* NSDate+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A355691AA250F4009796A8 /* NSDate+ENVAdditions.m */; };
 		C2A355711AA250F4009796A8 /* NSString+ENVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A3556B1AA250F4009796A8 /* NSString+ENVAdditions.m */; };
+		C2A355791AA25AF2009796A8 /* VT.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2A355751AA25AE6009796A8 /* VT.txt */; };
+		C2A3557A1AA25AF7009796A8 /* VTSample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2A355761AA25AE6009796A8 /* VTSample.txt */; };
+		C2A355801AA260F2009796A8 /* ENVVersion07LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A3557F1AA260F2009796A8 /* ENVVersion07LicenseParser.m */; };
+		C2A355831AA267BE009796A8 /* VTExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2A355811AA267B9009796A8 /* VTExpired.txt */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				C2271CDD1A9995D400CF2956 /* SC.txt in CopyFiles */,
+				C2A355791AA25AF2009796A8 /* VT.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				C2271CDC1A9995D000CF2956 /* SCExpired.txt in CopyFiles */,
+				C2A355831AA267BE009796A8 /* VTExpired.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +77,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				C2271CE01A99971E00CF2956 /* SCSample.txt in CopyFiles */,
+				C2A3557A1AA25AF7009796A8 /* VTSample.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +124,11 @@
 		C2A355691AA250F4009796A8 /* NSDate+ENVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+ENVAdditions.m"; path = "../../ENVLicenseParser/NSDate+ENVAdditions.m"; sourceTree = "<group>"; };
 		C2A3556A1AA250F4009796A8 /* NSString+ENVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ENVAdditions.h"; path = "../../ENVLicenseParser/NSString+ENVAdditions.h"; sourceTree = "<group>"; };
 		C2A3556B1AA250F4009796A8 /* NSString+ENVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ENVAdditions.m"; path = "../../ENVLicenseParser/NSString+ENVAdditions.m"; sourceTree = "<group>"; };
+		C2A355751AA25AE6009796A8 /* VT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VT.txt; path = ../../data/VT.txt; sourceTree = "<group>"; };
+		C2A355761AA25AE6009796A8 /* VTSample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VTSample.txt; path = ../../data/VTSample.txt; sourceTree = "<group>"; };
+		C2A3557E1AA260F2009796A8 /* ENVVersion07LicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVVersion07LicenseParser.h; path = ../../ENVLicenseParser/ENVVersion07LicenseParser.h; sourceTree = "<group>"; };
+		C2A3557F1AA260F2009796A8 /* ENVVersion07LicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVVersion07LicenseParser.m; path = ../../ENVLicenseParser/ENVVersion07LicenseParser.m; sourceTree = "<group>"; };
+		C2A355811AA267B9009796A8 /* VTExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VTExpired.txt; path = ../../data/VTExpired.txt; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +266,8 @@
 				C2A355631AA250F4009796A8 /* ENVPerson.m */,
 				C2A355641AA250F4009796A8 /* ENVVersion01LicenseParser.h */,
 				C2A355651AA250F4009796A8 /* ENVVersion01LicenseParser.m */,
+				C2A3557E1AA260F2009796A8 /* ENVVersion07LicenseParser.h */,
+				C2A3557F1AA260F2009796A8 /* ENVVersion07LicenseParser.m */,
 				C2A355661AA250F4009796A8 /* NSArray+ENVAdditions.h */,
 				C2A355671AA250F4009796A8 /* NSArray+ENVAdditions.m */,
 				C2A355681AA250F4009796A8 /* NSDate+ENVAdditions.h */,
@@ -270,6 +284,9 @@
 				C2271CBC1A98572000CF2956 /* SC.txt */,
 				C2271CD71A9982E700CF2956 /* SCExpired.txt */,
 				C2271CDE1A99971500CF2956 /* SCSample.txt */,
+				C2A355751AA25AE6009796A8 /* VT.txt */,
+				C2A355811AA267B9009796A8 /* VTExpired.txt */,
+				C2A355761AA25AE6009796A8 /* VTSample.txt */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -428,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A355801AA260F2009796A8 /* ENVVersion07LicenseParser.m in Sources */,
 				C2A355701AA250F4009796A8 /* NSDate+ENVAdditions.m in Sources */,
 				C2A355711AA250F4009796A8 /* NSString+ENVAdditions.m in Sources */,
 				C2271C9E1A98449C00CF2956 /* ENVAppDelegate.m in Sources */,

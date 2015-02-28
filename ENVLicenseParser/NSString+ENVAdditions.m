@@ -2,6 +2,24 @@
 
 @implementation NSString (ENVAdditions)
 
++ (NSString *)env_formatAddressFromStreet:(NSString *)street
+                                     city:(NSString *)city
+                                    state:(NSString *)state
+                                      zip:(NSString *)zip
+{
+  if (!street) {
+    street = @"";
+  }
+
+  NSString *address = [[[[street env_stringByJoiningString:city]
+                         env_stringByJoiningString:state]
+                        env_stringByJoiningString:zip] capitalizedString];
+  NSRange range = [address rangeOfString:[state capitalizedString]
+                                 options:NSBackwardsSearch];
+  return [address stringByReplacingCharactersInRange:range
+                                          withString:[state uppercaseString]];
+}
+
 - (NSString *)env_stringByTrimmingSpaces
 {
   return [self stringByTrimmingCharactersInSet:

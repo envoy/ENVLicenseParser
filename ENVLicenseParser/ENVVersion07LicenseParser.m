@@ -1,52 +1,47 @@
 #import "ENVPerson.h"
-#import "ENVVersion01LicenseParser.h"
+#import "ENVVersion07LicenseParser.h"
 #import "NSArray+ENVAdditions.h"
 #import "NSDate+ENVAdditions.h"
 #import "NSString+ENVAdditions.h"
 
-@implementation ENVVersion01LicenseParser
+@implementation ENVVersion07LicenseParser
 
 + (ENVPerson *)personFromString:(NSString *)string
 {
   NSArray *components = [string componentsSeparatedByCharactersInSet:
                          [NSCharacterSet newlineCharacterSet]];
   NSDictionary *dictionary = [components env_licenseDictionary];
-  
+
   NSString *licenseID = [self formatLicenseIDFromString:dictionary[@"ANS"]];
-  NSString *name = [self formatNameFromString:dictionary[@"DAA"]];
   NSString *street = dictionary[@"DAG"];
   NSString *city = dictionary[@"DAI"];
   NSString *state = dictionary[@"DAJ"];
   NSString *zip = dictionary[@"DAK"];
-  NSString *dateString = dictionary[@"DBA"];
-  NSDate *date = [NSDate env_dateFromString:dateString
-                                 withFormat:@"yyyyMMdd"];
-  BOOL expired = [date env_isInPast];
   NSString *address = [NSString env_formatAddressFromStreet:street
                                                        city:city
                                                       state:state
                                                         zip:zip];
+  
+  NSString *firstName = dictionary[@"DAC"];
+  if (!firstName) {
+    firstName = @"";
+  }
+  NSString *middleName = dictionary[@"DAD"];
+  NSString *lastName = dictionary[@"DCS"];
+  NSString *fullName = [[[[firstName env_stringByJoiningString:middleName]
+                          env_stringByJoiningString:lastName]
+                         env_stringByTrimmingSpaces]
+                        capitalizedString];
 
-  return [[ENVPerson alloc] initWithName:name
+  NSString *expirationDateSting = dictionary[@"DBA"];
+  NSDate *expirationDate = [NSDate env_dateFromString:expirationDateSting
+                                           withFormat:@"MMddyyyy"];
+  BOOL expired = [expirationDate env_isInPast];
+
+  return [[ENVPerson alloc] initWithName:fullName
                                licenseID:licenseID
                                  address:address
                                  expired:expired];
-}
-
-+ (NSString *)formatNameFromString:(NSString *)string
-{
-  NSArray *components = [string componentsSeparatedByString:@","];
-  if (components.count < 1) {
-    return nil;
-  }
-
-  NSString *lastName = components.firstObject;
-  NSRange range = NSMakeRange(1, components.count - 1);
-  NSString *givenName = [[components subarrayWithRange:range]
-                         componentsJoinedByString:@" "];
-
-  return [[[givenName stringByAppendingString:lastName]
-           env_stringByTrimmingSpaces] capitalizedString];
 }
 
 + (NSString *)formatLicenseIDFromString:(NSString *)string
