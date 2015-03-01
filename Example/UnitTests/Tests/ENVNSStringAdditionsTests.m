@@ -61,4 +61,22 @@
   XCTAssertEqualObjects(joinedString, @"Last");
 }
 
+- (void)testNameByFilteringNoneFromEmpty
+{
+  NSString *name = [NSString env_nameByFilteringNone:@""];
+  XCTAssertEqualObjects(name, @"");
+}
+
+- (void)testNameByFilteringNoneFromValidName
+{
+  NSString *name = [NSString env_nameByFilteringNone:@"Middle"];
+  XCTAssertEqualObjects(name, @"Middle");
+}
+
+- (void)testNameByFilteringNoneFromValidNone
+{
+  NSString *name = [NSString env_nameByFilteringNone:@"none"];
+  XCTAssertEqualObjects(name, @"");
+}
+
 @end

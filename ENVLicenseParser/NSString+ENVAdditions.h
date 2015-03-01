@@ -2,6 +2,7 @@
 
 @interface NSString (ENVAdditions)
 
++ (NSString *)env_nameByFilteringNone:(NSString *)name;
 + (NSString *)env_formatAddressFromStreet:(NSString *)street
                                      city:(NSString *)city
                                     state:(NSString *)state

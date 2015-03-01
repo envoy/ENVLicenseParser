@@ -2,6 +2,19 @@
 
 @implementation NSString (ENVAdditions)
 
++ (NSString *)env_nameByFilteringNone:(NSString *)name
+{
+  if (name.length == 0) {
+    return @"";
+  }
+
+  if ([[name uppercaseString] isEqualToString:@"NONE"]) {
+    return @"";
+  }
+
+  return name;
+}
+
 + (NSString *)env_formatAddressFromStreet:(NSString *)street
                                      city:(NSString *)city
                                     state:(NSString *)state
