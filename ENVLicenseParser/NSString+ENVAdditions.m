@@ -24,11 +24,19 @@
     street = @"";
   }
 
+  if (!state) {
+    state = @"";
+  }
+
   NSString *address = [[[[street env_stringByJoiningString:city]
                          env_stringByJoiningString:state]
                         env_stringByJoiningString:zip] capitalizedString];
   NSRange range = [address rangeOfString:[state capitalizedString]
                                  options:NSBackwardsSearch];
+  if (range.location == NSNotFound) {
+    return address;
+  }
+
   return [address stringByReplacingCharactersInRange:range
                                           withString:[state uppercaseString]];
 }

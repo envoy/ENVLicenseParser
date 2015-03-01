@@ -79,4 +79,13 @@
   XCTAssertEqualObjects(name, @"");
 }
 
+- (void)testFormatAddressWithNil
+{
+  NSString *address = [NSString env_formatAddressFromStreet:nil
+                                                       city:nil
+                                                      state:nil
+                                                        zip:nil];
+  XCTAssertEqualObjects(address, @"");
+}
+
 @end
