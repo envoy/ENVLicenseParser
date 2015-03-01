@@ -13,6 +13,11 @@
     return nil;
   }
 
+  NSString *fileType = [string substringWithRange:NSMakeRange(4, 5)];
+  if (![fileType.uppercaseString isEqualToString:@"ANSI "]) {
+    return nil;
+  }
+
   NSString *version = [string substringWithRange:NSMakeRange(15, 2)];
   NSString *className = [NSString stringWithFormat:@"ENVVersion%@LicenseParser", version];
   Class class = NSClassFromString(className);
