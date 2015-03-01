@@ -42,6 +42,9 @@
 		C2B37B9F1AA39FB50038F1CC /* VASample2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37B9D1AA39FAF0038F1CC /* VASample2.txt */; };
 		C2B37BA21AA3A1350038F1CC /* VAExpired2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BA01AA3A1290038F1CC /* VAExpired2.txt */; };
 		C2B37BA51AA3A14E0038F1CC /* ENVVersion03LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B37BA41AA3A14E0038F1CC /* ENVVersion03LicenseParser.m */; };
+		C2B37BA81AA3A4890038F1CC /* WASample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BA61AA3A47F0038F1CC /* WASample.txt */; };
+		C2B37BAB1AA3A52F0038F1CC /* WA.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BA91AA3A52A0038F1CC /* WA.txt */; };
+		C2B37BAF1AA3A55A0038F1CC /* WAExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BAC1AA3A54E0038F1CC /* WAExpired.txt */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,7 @@
 				C2A355791AA25AF2009796A8 /* VT.txt in CopyFiles */,
 				C2B37B921AA39ABA0038F1CC /* VA.txt in CopyFiles */,
 				C2B37B9C1AA39F7D0038F1CC /* VA2.txt in CopyFiles */,
+				C2B37BAB1AA3A52F0038F1CC /* WA.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 				C2A355831AA267BE009796A8 /* VTExpired.txt in CopyFiles */,
 				C2B37B961AA39D540038F1CC /* VAExpired.txt in CopyFiles */,
 				C2B37BA21AA3A1350038F1CC /* VAExpired2.txt in CopyFiles */,
+				C2B37BAF1AA3A55A0038F1CC /* WAExpired.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,7 @@
 				C2A3557A1AA25AF7009796A8 /* VTSample.txt in CopyFiles */,
 				C2B37B931AA39ABD0038F1CC /* VASample.txt in CopyFiles */,
 				C2B37B9F1AA39FB50038F1CC /* VASample2.txt in CopyFiles */,
+				C2B37BA81AA3A4890038F1CC /* WASample.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +159,9 @@
 		C2B37BA01AA3A1290038F1CC /* VAExpired2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VAExpired2.txt; path = ../../data/VAExpired2.txt; sourceTree = "<group>"; };
 		C2B37BA31AA3A14E0038F1CC /* ENVVersion03LicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVVersion03LicenseParser.h; path = ../../ENVLicenseParser/ENVVersion03LicenseParser.h; sourceTree = "<group>"; };
 		C2B37BA41AA3A14E0038F1CC /* ENVVersion03LicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVVersion03LicenseParser.m; path = ../../ENVLicenseParser/ENVVersion03LicenseParser.m; sourceTree = "<group>"; };
+		C2B37BA61AA3A47F0038F1CC /* WASample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WASample.txt; path = ../../data/WASample.txt; sourceTree = "<group>"; };
+		C2B37BA91AA3A52A0038F1CC /* WA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WA.txt; path = ../../data/WA.txt; sourceTree = "<group>"; };
+		C2B37BAC1AA3A54E0038F1CC /* WAExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WAExpired.txt; path = ../../data/WAExpired.txt; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +330,9 @@
 				C2A355751AA25AE6009796A8 /* VT.txt */,
 				C2A355811AA267B9009796A8 /* VTExpired.txt */,
 				C2A355761AA25AE6009796A8 /* VTSample.txt */,
+				C2B37BA91AA3A52A0038F1CC /* WA.txt */,
+				C2B37BAC1AA3A54E0038F1CC /* WAExpired.txt */,
+				C2B37BA61AA3A47F0038F1CC /* WASample.txt */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
