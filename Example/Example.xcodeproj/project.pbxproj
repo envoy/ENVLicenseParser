@@ -48,7 +48,6 @@
 		C2B37BB41AA3A5F50038F1CC /* GA.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BB01AA3A5EE0038F1CC /* GA.txt */; };
 		C2B37BB51AA3A5FA0038F1CC /* GASample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BB11AA3A5EE0038F1CC /* GASample.txt */; };
 		C2B37BB81AA3A64D0038F1CC /* ENVVersion06LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B37BB71AA3A64D0038F1CC /* ENVVersion06LicenseParser.m */; };
-		C2B37BBA1AA3A7800038F1CC /* GAExpired.txt in Resources */ = {isa = PBXBuildFile; fileRef = C2B37BB91AA3A7800038F1CC /* GAExpired.txt */; };
 		C2B37BBB1AA3A7870038F1CC /* GAExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37BB91AA3A7800038F1CC /* GAExpired.txt */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
@@ -88,9 +87,9 @@
 				C2271CDC1A9995D000CF2956 /* SCExpired.txt in CopyFiles */,
 				C2A355831AA267BE009796A8 /* VTExpired.txt in CopyFiles */,
 				C2B37B961AA39D540038F1CC /* VAExpired.txt in CopyFiles */,
+				C2B37BBB1AA3A7870038F1CC /* GAExpired.txt in CopyFiles */,
 				C2B37BA21AA3A1350038F1CC /* VAExpired2.txt in CopyFiles */,
 				C2B37BAF1AA3A55A0038F1CC /* WAExpired.txt in CopyFiles */,
-				C2B37BBB1AA3A7870038F1CC /* GAExpired.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +466,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2B37BBA1AA3A7800038F1CC /* GAExpired.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
