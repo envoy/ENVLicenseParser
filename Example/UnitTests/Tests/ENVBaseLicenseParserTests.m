@@ -29,11 +29,11 @@
     NSString *state = [fileURL.lastPathComponent substringToIndex:2];
     NSString *string = [ENVFixtureLoader stringFromURL:fileURL];
     ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
-    ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
+    ENVPerson *validPerson = [[ENVPerson alloc] initWithName:Name
                                                    licenseID:LicenseNumber
                                                      address:[NSString stringWithFormat:AddressFormat, state]
                                                      expired:NO];
-    XCTAssertEqualObjects(person, vaildPerson);
+    XCTAssertEqualObjects(person, validPerson);
   }
 }
 
@@ -45,11 +45,11 @@
     NSString *state = [fileURL.lastPathComponent substringToIndex:2];
     NSString *string = [ENVFixtureLoader stringFromURL:fileURL];
     ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
-    ENVPerson *vaildPerson = [[ENVPerson alloc] initWithName:Name
+    ENVPerson *validPerson = [[ENVPerson alloc] initWithName:Name
                                                    licenseID:LicenseNumber
                                                      address:[NSString stringWithFormat:AddressFormat, state]
                                                      expired:YES];
-    XCTAssertEqualObjects(person, vaildPerson);
+    XCTAssertEqualObjects(person, validPerson);
   }
 }
 
