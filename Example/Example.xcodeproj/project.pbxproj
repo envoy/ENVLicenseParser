@@ -25,6 +25,7 @@
 		C2271CDD1A9995D400CF2956 /* SC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2271CBC1A98572000CF2956 /* SC.txt */; };
 		C2271CE01A99971E00CF2956 /* SCSample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2271CDE1A99971500CF2956 /* SCSample.txt */; };
 		C29DA3CB1AA3B64F00FC5986 /* CAExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C29DA3C91AA3B64300FC5986 /* CAExpired.txt */; };
+		C29DA3D41AA3B86F00FC5986 /* ENVVersion02LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C29DA3D31AA3B86F00FC5986 /* ENVVersion02LicenseParser.m */; };
 		C2A3556C1AA250F4009796A8 /* ENVBaseLicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A355601AA250F4009796A8 /* ENVBaseLicenseParser.m */; };
 		C2A3556D1AA250F4009796A8 /* ENVPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A355631AA250F4009796A8 /* ENVPerson.m */; };
 		C2A3556E1AA250F4009796A8 /* ENVVersion01LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A355651AA250F4009796A8 /* ENVVersion01LicenseParser.m */; };
@@ -150,6 +151,8 @@
 		C2271CD71A9982E700CF2956 /* SCExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SCExpired.txt; path = ../../data/SCExpired.txt; sourceTree = "<group>"; };
 		C2271CDE1A99971500CF2956 /* SCSample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SCSample.txt; path = ../../data/SCSample.txt; sourceTree = "<group>"; };
 		C29DA3C91AA3B64300FC5986 /* CAExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CAExpired.txt; path = ../../data/CAExpired.txt; sourceTree = "<group>"; };
+		C29DA3D21AA3B86F00FC5986 /* ENVVersion02LicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVVersion02LicenseParser.h; path = ../../ENVLicenseParser/ENVVersion02LicenseParser.h; sourceTree = "<group>"; };
+		C29DA3D31AA3B86F00FC5986 /* ENVVersion02LicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVVersion02LicenseParser.m; path = ../../ENVLicenseParser/ENVVersion02LicenseParser.m; sourceTree = "<group>"; };
 		C2A3555F1AA250F4009796A8 /* ENVBaseLicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVBaseLicenseParser.h; path = ../../ENVLicenseParser/ENVBaseLicenseParser.h; sourceTree = "<group>"; };
 		C2A355601AA250F4009796A8 /* ENVBaseLicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVBaseLicenseParser.m; path = ../../ENVLicenseParser/ENVBaseLicenseParser.m; sourceTree = "<group>"; };
 		C2A355611AA250F4009796A8 /* ENVLicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVLicenseParser.h; path = ../../ENVLicenseParser/ENVLicenseParser.h; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				C2A355631AA250F4009796A8 /* ENVPerson.m */,
 				C2A355641AA250F4009796A8 /* ENVVersion01LicenseParser.h */,
 				C2A355651AA250F4009796A8 /* ENVVersion01LicenseParser.m */,
+				C29DA3D21AA3B86F00FC5986 /* ENVVersion02LicenseParser.h */,
+				C29DA3D31AA3B86F00FC5986 /* ENVVersion02LicenseParser.m */,
 				C2B37BA31AA3A14E0038F1CC /* ENVVersion03LicenseParser.h */,
 				C2B37BA41AA3A14E0038F1CC /* ENVVersion03LicenseParser.m */,
 				C2B37BC51AA3B0590038F1CC /* ENVVersion04LicenseParser.h */,
@@ -536,6 +541,7 @@
 				C2A355801AA260F2009796A8 /* ENVVersion07LicenseParser.m in Sources */,
 				C2A355701AA250F4009796A8 /* NSDate+ENVAdditions.m in Sources */,
 				C2A355711AA250F4009796A8 /* NSString+ENVAdditions.m in Sources */,
+				C29DA3D41AA3B86F00FC5986 /* ENVVersion02LicenseParser.m in Sources */,
 				C2271C9E1A98449C00CF2956 /* ENVAppDelegate.m in Sources */,
 				C2B37B991AA39D8B0038F1CC /* ENVVersion05LicenseParser.m in Sources */,
 				494283D0D8F3D419F2C4B48F /* Main.storyboard in Sources */,
