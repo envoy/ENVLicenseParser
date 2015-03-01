@@ -34,6 +34,9 @@
 		C2A3557A1AA25AF7009796A8 /* VTSample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2A355761AA25AE6009796A8 /* VTSample.txt */; };
 		C2A355801AA260F2009796A8 /* ENVVersion07LicenseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A3557F1AA260F2009796A8 /* ENVVersion07LicenseParser.m */; };
 		C2A355831AA267BE009796A8 /* VTExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2A355811AA267B9009796A8 /* VTExpired.txt */; };
+		C2B37B921AA39ABA0038F1CC /* VA.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37B8E1AA39AA10038F1CC /* VA.txt */; };
+		C2B37B931AA39ABD0038F1CC /* VASample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37B8F1AA39AA10038F1CC /* VASample.txt */; };
+		C2B37B961AA39D540038F1CC /* VAExpired.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2B37B941AA39D470038F1CC /* VAExpired.txt */; };
 		CADCF3D645591696244F8476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949E6D4E1BF448753E9A7D7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,7 @@
 			files = (
 				C2271CDD1A9995D400CF2956 /* SC.txt in CopyFiles */,
 				C2A355791AA25AF2009796A8 /* VT.txt in CopyFiles */,
+				C2B37B921AA39ABA0038F1CC /* VA.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +71,7 @@
 			files = (
 				C2271CDC1A9995D000CF2956 /* SCExpired.txt in CopyFiles */,
 				C2A355831AA267BE009796A8 /* VTExpired.txt in CopyFiles */,
+				C2B37B961AA39D540038F1CC /* VAExpired.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			files = (
 				C2271CE01A99971E00CF2956 /* SCSample.txt in CopyFiles */,
 				C2A3557A1AA25AF7009796A8 /* VTSample.txt in CopyFiles */,
+				C2B37B931AA39ABD0038F1CC /* VASample.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,9 @@
 		C2A3557E1AA260F2009796A8 /* ENVVersion07LicenseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENVVersion07LicenseParser.h; path = ../../ENVLicenseParser/ENVVersion07LicenseParser.h; sourceTree = "<group>"; };
 		C2A3557F1AA260F2009796A8 /* ENVVersion07LicenseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENVVersion07LicenseParser.m; path = ../../ENVLicenseParser/ENVVersion07LicenseParser.m; sourceTree = "<group>"; };
 		C2A355811AA267B9009796A8 /* VTExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VTExpired.txt; path = ../../data/VTExpired.txt; sourceTree = "<group>"; };
+		C2B37B8E1AA39AA10038F1CC /* VA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VA.txt; path = ../../data/VA.txt; sourceTree = "<group>"; };
+		C2B37B8F1AA39AA10038F1CC /* VASample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VASample.txt; path = ../../data/VASample.txt; sourceTree = "<group>"; };
+		C2B37B941AA39D470038F1CC /* VAExpired.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VAExpired.txt; path = ../../data/VAExpired.txt; sourceTree = "<group>"; };
 		D8E0D7DEBD598BFFC864E675 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		F48C0703A7959EBCB414485A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +293,9 @@
 				C2271CBC1A98572000CF2956 /* SC.txt */,
 				C2271CD71A9982E700CF2956 /* SCExpired.txt */,
 				C2271CDE1A99971500CF2956 /* SCSample.txt */,
+				C2B37B8E1AA39AA10038F1CC /* VA.txt */,
+				C2B37B941AA39D470038F1CC /* VAExpired.txt */,
+				C2B37B8F1AA39AA10038F1CC /* VASample.txt */,
 				C2A355751AA25AE6009796A8 /* VT.txt */,
 				C2A355811AA267B9009796A8 /* VTExpired.txt */,
 				C2A355761AA25AE6009796A8 /* VTSample.txt */,

@@ -8,12 +8,9 @@ Address:     1234 Fake St
 City:        Fake Town
 State:       The specific state to test (example `CA`)
 Zip Code:    363659076
-Height:      5"2'
-Weight:      125 lbs
 Expiration:  10-21-2025
 DOB:         10-21-1950
 Issue date:  09-25-1960
-Gender:      Male
 
 # Notes
 
