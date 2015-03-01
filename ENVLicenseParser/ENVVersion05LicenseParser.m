@@ -26,7 +26,7 @@
   if (!firstName) {
     firstName = @"";
   }
-  NSString *middleName = dictionary[@"DAD"];
+  NSString *middleName = [NSString env_nameByFilteringNone:dictionary[@"DAD"]];
   NSString *lastName = dictionary[@"DCS"];
   NSString *fullName = [[[[firstName env_stringByJoiningString:middleName]
                           env_stringByJoiningString:lastName]
