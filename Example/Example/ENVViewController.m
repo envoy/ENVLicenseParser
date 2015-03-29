@@ -1,5 +1,7 @@
 @import AVFoundation;
 #import "ENVViewController.h"
+#import "ENVBaseLicenseParser.h"
+#import "ENVPerson.h"
 
 @interface ENVViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
@@ -67,6 +69,10 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
                                 inDomains:NSUserDomainMask] firstObject];
   NSURL *fileURL = [documentsDirectory URLByAppendingPathComponent:filename];
   NSLog(@"Scanned: %@", string);
+  ENVPerson *person = [ENVBaseLicenseParser personFromString:string];
+  NSLog(@"Scanned name: %@ license ID: %@ address: %@ is expired: %@",
+        person.name, person.licenseID, person.address,
+        person.expired ? @"Yes" : @"No");
   BOOL written = [string writeToURL:fileURL
                          atomically:YES
                            encoding:NSUTF8StringEncoding
