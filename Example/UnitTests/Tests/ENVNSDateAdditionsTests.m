@@ -6,14 +6,12 @@
 
 @implementation ENVNSDateAdditionsTests
 
-- (void)testIsDateInPast
-{
+- (void)testIsDateInPast {
   NSDate *date = [NSDate dateWithTimeIntervalSinceNow:-100];
   XCTAssertTrue([date env_isInPast]);
 }
 
-- (void)testDateIsNotInPast
-{
+- (void)testDateIsNotInPast {
   NSDate *date = [NSDate dateWithTimeIntervalSinceNow:100];
   XCTAssertFalse([date env_isInPast]);
 }

@@ -9,20 +9,17 @@
 
 @implementation ENVBaseLicenseParserTests
 
-- (void)testEmptyString
-{
+- (void)testEmptyString {
   XCTAssertNil([ENVBaseLicenseParser personFromString:@""]);
   XCTAssertNil([ENVBaseLicenseParser personFromString:nil]);
 }
 
-- (void)testMissingCompliance
-{
+- (void)testMissingCompliance {
   NSString *dummyString = [NSString stringWithCharacter:'a' count:20];
   XCTAssertNil([ENVBaseLicenseParser personFromString:dummyString]);
 }
 
-- (void)testSupportedStates
-{
+- (void)testSupportedStates {
   NSArray *fileURLs = [ENVFixtureLoader statesURLs];
   XCTAssertTrue(fileURLs.count > 0);
   for (NSURL *fileURL in fileURLs) {
@@ -37,8 +34,7 @@
   }
 }
 
-- (void)testExpiredStates
-{
+- (void)testExpiredStates {
   NSArray *fileURLs = [ENVFixtureLoader expiredStatesURLs];
   XCTAssertTrue(fileURLs.count > 0);
   for (NSURL *fileURL in fileURLs) {
@@ -53,8 +49,7 @@
   }
 }
 
-- (void)testSamples
-{
+- (void)testSamples {
   NSArray *fileURLs = [ENVFixtureLoader sampleURLs];
   XCTAssertTrue(fileURLs.count > 0);
   for (NSURL *fileURL in fileURLs) {

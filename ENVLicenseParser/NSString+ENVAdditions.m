@@ -2,8 +2,7 @@
 
 @implementation NSString (ENVAdditions)
 
-+ (NSString *)env_nameByFilteringNone:(NSString *)name
-{
++ (NSString *)env_nameByFilteringNone:(NSString *)name {
   if (name.length == 0) {
     return @"";
   }
@@ -18,8 +17,7 @@
 + (NSString *)env_formatAddressFromStreet:(NSString *)street
                                      city:(NSString *)city
                                     state:(NSString *)state
-                                      zip:(NSString *)zip
-{
+                                      zip:(NSString *)zip {
   if (!street) {
     street = @"";
   }
@@ -41,14 +39,12 @@
                                           withString:[state uppercaseString]];
 }
 
-- (NSString *)env_stringByTrimmingSpaces
-{
+- (NSString *)env_stringByTrimmingSpaces {
   return [self stringByTrimmingCharactersInSet:
           [NSCharacterSet whitespaceCharacterSet]];
 }
 
-- (NSString *)env_stringByJoiningString:(NSString *)string
-{
+- (NSString *)env_stringByJoiningString:(NSString *)string {
   if (string.length == 0) {
     return self;
   }

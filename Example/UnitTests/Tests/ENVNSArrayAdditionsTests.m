@@ -6,16 +6,14 @@
 
 @implementation ENVNSArrayAdditionsTests
 
-- (void)testDictionaryFromArray
-{
+- (void)testDictionaryFromArray {
   NSArray *array = @[@"foobar", @"baz", @"qux1"];
   NSDictionary *dictionary = [array env_licenseDictionary];
   NSDictionary *expectedDictionary = @{@"foo": @"bar", @"qux": @"1"};
   XCTAssertEqualObjects(dictionary, expectedDictionary);
 }
 
-- (void)testDictionaryFromEmptyArray
-{
+- (void)testDictionaryFromEmptyArray {
   XCTAssertEqualObjects([@[] env_licenseDictionary], @{});
 }
 

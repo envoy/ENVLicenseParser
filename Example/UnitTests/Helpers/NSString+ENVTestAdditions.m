@@ -3,8 +3,7 @@
 @implementation NSString (ENVTestAdditions)
 
 + (NSString *)stringWithCharacter:(unichar)character
-                            count:(NSUInteger)count
-{
+                            count:(NSUInteger)count {
   NSString *string = @"";
 
   for (NSUInteger i = 0; i < count; i++) {

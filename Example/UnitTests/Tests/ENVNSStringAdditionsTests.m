@@ -6,81 +6,69 @@
 
 @implementation ENVNSStringAdditionsTests
 
-- (void)testTrimmingSpace
-{
+- (void)testTrimmingSpace {
   NSString *string = @" foo ";
   NSString *trimmedString = [string env_stringByTrimmingSpaces];
   XCTAssertEqualObjects(trimmedString, @"foo");
 }
 
-- (void)testTrimmingSpaceOnlyTrimsSpaces
-{
+- (void)testTrimmingSpaceOnlyTrimsSpaces {
   NSString *string = @" foo\n";
   NSString *trimmedString = [string env_stringByTrimmingSpaces];
   XCTAssertEqualObjects(trimmedString, @"foo\n");
 }
 
-- (void)testJoiningString
-{
+- (void)testJoiningString {
   NSString *string = @"First";
   NSString *joinedString = [string env_stringByJoiningString:@"Last"];
   XCTAssertEqualObjects(joinedString, @"First Last");
 }
 
-- (void)testJoiningBlankString
-{
+- (void)testJoiningBlankString {
   NSString *string = @"First";
   NSString *joinedString = [string env_stringByJoiningString:@""];
   XCTAssertEqualObjects(joinedString, @"First");
 }
 
-- (void)testJoiningWhitespaceString
-{
+- (void)testJoiningWhitespaceString {
   NSString *string = @"First";
   NSString *joinedString = [string env_stringByJoiningString:@" "];
   XCTAssertEqualObjects(joinedString, @"First");
 }
 
-- (void)testJoiningNilString
-{
+- (void)testJoiningNilString {
   NSString *string = @"First";
   NSString *joinedString = [string env_stringByJoiningString:nil];
   XCTAssertEqualObjects(joinedString, @"First");
 }
 
-- (void)testJoiningLongString
-{
+- (void)testJoiningLongString {
   NSString *string = @"First";
   NSString *joinedString = [string env_stringByJoiningString:@"Middle Last"];
   XCTAssertEqualObjects(joinedString, @"First Middle Last");
 }
 
-- (void)testJoiningIntoEmptyString
-{
+- (void)testJoiningIntoEmptyString {
   NSString *joinedString = [@"" env_stringByJoiningString:@"Last"];
   XCTAssertEqualObjects(joinedString, @"Last");
 }
 
-- (void)testNameByFilteringNoneFromEmpty
-{
+- (void)testNameByFilteringNoneFromEmpty {
   NSString *name = [NSString env_nameByFilteringNone:@""];
   XCTAssertEqualObjects(name, @"");
 }
 
-- (void)testNameByFilteringNoneFromValidName
-{
+- (void)testNameByFilteringNoneFromValidName {
   NSString *name = [NSString env_nameByFilteringNone:@"Middle"];
   XCTAssertEqualObjects(name, @"Middle");
 }
 
-- (void)testNameByFilteringNoneFromValidNone
-{
+- (void)testNameByFilteringNoneFromValidNone {
   NSString *name = [NSString env_nameByFilteringNone:@"none"];
   XCTAssertEqualObjects(name, @"");
 }
 
-- (void)testFormatAddressWithNil
-{
+- (void)testFormatAddressWithNil {
   NSString *address = [NSString env_formatAddressFromStreet:nil
                                                        city:nil
                                                       state:nil

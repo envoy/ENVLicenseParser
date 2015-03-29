@@ -2,8 +2,7 @@
 
 @implementation ENVBaseLicenseParser
 
-+ (ENVPerson *)personFromString:(NSString *)string
-{
++ (ENVPerson *)personFromString:(NSString *)string {
   if (string.length < 17) {
     return nil;
   }

@@ -9,8 +9,7 @@
 
 @implementation ENVViewController
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
 
   AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -46,8 +45,7 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
 didOutputMetadataObjects:(NSArray *)metadataObjects
-       fromConnection:(AVCaptureConnection *)connection
-{
+       fromConnection:(AVCaptureConnection *)connection {
   NSString *string;
   for (AVMetadataMachineReadableCodeObject *metadata in metadataObjects) {
     if (![metadata.type isEqualToString:AVMetadataObjectTypePDF417Code]) {

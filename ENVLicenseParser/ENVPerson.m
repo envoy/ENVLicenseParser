@@ -5,8 +5,7 @@
 - (instancetype)initWithName:(NSString *)name
                    licenseID:(NSString *)licenseID
                      address:(NSString *)address
-                     expired:(BOOL)expired
-{
+                     expired:(BOOL)expired {
   self = [super init];
   if (!self) return nil;
   
@@ -18,8 +17,7 @@
   return self;
 }
 
-- (BOOL)isEqual:(ENVPerson *)object
-{
+- (BOOL)isEqual:(ENVPerson *)object {
   if (![object isKindOfClass:[self class]]) {
     return NO;
   }
@@ -43,8 +41,7 @@
   return YES;
 }
 
-- (NSString *)description
-{
+- (NSString *)description {
   return [NSString stringWithFormat:@"<%@: %p - %@ %@ %@ Expired? %@>",
           NSStringFromClass([self class]), self, self.licenseID, self.name,
           self.address, self.expired ? @"Yes" : @"No"];

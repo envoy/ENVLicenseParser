@@ -6,8 +6,7 @@
 
 @implementation ENVPersonTests
 
-- (void)testCreation
-{
+- (void)testCreation {
   NSString *address = [NSString stringWithFormat:AddressFormat, @"CA"];
   ENVPerson *person = [[ENVPerson alloc] initWithName:Name
                                             licenseID:LicenseNumber
@@ -19,8 +18,7 @@
   XCTAssertFalse(person.expired);
 }
 
-- (void)testEquality
-{
+- (void)testEquality {
   NSString *address = [NSString stringWithFormat:AddressFormat, @"CA"];
   ENVPerson *person1 = [[ENVPerson alloc] initWithName:Name
                                              licenseID:LicenseNumber
@@ -33,8 +31,7 @@
   XCTAssertEqualObjects(person1, person2);
 }
 
-- (void)testInequality
-{
+- (void)testInequality {
   NSString *address1 = [NSString stringWithFormat:AddressFormat, @"CA"];
   ENVPerson *person1 = [[ENVPerson alloc] initWithName:Name
                                              licenseID:LicenseNumber

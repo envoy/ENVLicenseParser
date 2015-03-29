@@ -6,8 +6,7 @@
 
 @implementation ENVVersion06LicenseParser
 
-+ (ENVPerson *)personFromString:(NSString *)string
-{
++ (ENVPerson *)personFromString:(NSString *)string {
   NSArray *components = [string componentsSeparatedByCharactersInSet:
                          [NSCharacterSet newlineCharacterSet]];
   NSDictionary *dictionary = [components env_licenseDictionary];

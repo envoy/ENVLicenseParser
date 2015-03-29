@@ -2,8 +2,7 @@
 
 @implementation NSArray (ENVAdditions)
 
-- (NSDictionary *)env_licenseDictionary
-{
+- (NSDictionary *)env_licenseDictionary {
   NSMutableDictionary *dictionary = [NSMutableDictionary new];
   for (NSString *component in self) {
     if (component.length < 4) {

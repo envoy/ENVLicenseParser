@@ -2,37 +2,32 @@
 
 @implementation ENVFixtureLoader
 
-+ (NSArray *)statesURLs
-{
++ (NSArray *)statesURLs {
   return [[NSBundle bundleForClass:[self class]]
           URLsForResourcesWithExtension:@"txt"
           subdirectory:@"states"];
 }
 
-+ (NSArray *)expiredStatesURLs
-{
++ (NSArray *)expiredStatesURLs {
   return [[NSBundle bundleForClass:[self class]]
           URLsForResourcesWithExtension:@"txt"
           subdirectory:@"expired"];
 }
 
-+ (NSArray *)sampleURLs
-{
++ (NSArray *)sampleURLs {
   return [[NSBundle bundleForClass:[self class]]
           URLsForResourcesWithExtension:@"txt"
           subdirectory:@"samples"];
 }
 
-+ (NSString *)stringFromURL:(NSURL *)URL
-{
++ (NSString *)stringFromURL:(NSURL *)URL {
   NSAssert(URL, @"Missing file URL");
   return [[NSString alloc] initWithContentsOfURL:URL
                                         encoding:NSUTF8StringEncoding
                                            error:nil];
 }
 
-+ (NSString *)stringFromState:(NSString *)state
-{
++ (NSString *)stringFromState:(NSString *)state {
   NSParameterAssert(state.length == 2);
   NSURL *fileURL = [[NSBundle bundleForClass:[self class]]
                     URLForResource:state withExtension:@"txt"];

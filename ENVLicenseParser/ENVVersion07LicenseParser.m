@@ -6,8 +6,7 @@
 
 @implementation ENVVersion07LicenseParser
 
-+ (ENVPerson *)personFromString:(NSString *)string
-{
++ (ENVPerson *)personFromString:(NSString *)string {
   NSArray *components = [string componentsSeparatedByCharactersInSet:
                          [NSCharacterSet newlineCharacterSet]];
   NSDictionary *dictionary = [components env_licenseDictionary];
@@ -44,8 +43,7 @@
                                  expired:expired];
 }
 
-+ (NSString *)formatLicenseIDFromString:(NSString *)string
-{
++ (NSString *)formatLicenseIDFromString:(NSString *)string {
   NSArray *components = [string componentsSeparatedByString:@"DAQ"];
   if (components.count < 2) {
     return nil;

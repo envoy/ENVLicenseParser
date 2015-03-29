@@ -6,8 +6,7 @@
 
 @implementation ENVVersion02LicenseParser
 
-+ (ENVPerson *)personFromString:(NSString *)string
-{
++ (ENVPerson *)personFromString:(NSString *)string {
   NSArray *components = [string componentsSeparatedByCharactersInSet:
                          [NSCharacterSet newlineCharacterSet]];
   NSDictionary *dictionary = [components env_licenseDictionary];
@@ -42,8 +41,7 @@
                                  expired:expired];
 }
 
-+ (NSString *)givenNamesFromString:(NSString *)string
-{
++ (NSString *)givenNamesFromString:(NSString *)string {
   return [string stringByReplacingOccurrencesOfString:@","
                                            withString:@" "];
 }
