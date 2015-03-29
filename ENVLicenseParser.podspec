@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "ENVLicenseParser"
-  s.version               = "1.0.0"
+  s.version               = "1.0.1"
   s.summary               = "A parser for AAMVA license barcode formats"
   s.homepage              = "https://github.com/envoy/ENVLicenseParser"
   s.license               = "MIT"
@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.7"
   s.source                = { :git => "https://github.com/envoy/ENVLicenseParser", :tag => "v#{ s.version }" }
   s.source_files          = "ENVLicenseParser/*.{h,m}"
-  s.public_header_files   = "ENVLicenseParser/ENVPerson.h", "ENVLicenseParser/ENVBaseLicenseParser.h"
+  s.public_header_files   = "ENVLicenseParser/ENVPerson.h", "ENVLicenseParser/ENVBaseLicenseParser.h", "ENVLicenseParser/ENVLicenseParser.h", "ENVLicenseParser/ENVLicenseParserProtocol.h"
   s.requires_arc          = true
 end
