@@ -1,7 +1,6 @@
 @import AVFoundation;
+#import "ENVLicenseParser.h"
 #import "ENVViewController.h"
-#import "ENVBaseLicenseParser.h"
-#import "ENVPerson.h"
 
 @interface ENVViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
